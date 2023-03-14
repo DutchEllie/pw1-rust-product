@@ -1,0 +1,67 @@
+@layer reset;
+@import url("static/reset.css") layer(reset);
+
+:root {
+  --color-border: rgb(225, 236, 236);
+  --color-bg: rgb(9, 50, 63);
+  --color-text: rgb(200, 255, 234);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  padding: 0.75rem;
+}
+
+header {
+  grid-column: 1/3;
+}
+
+header > h1 {
+  margin: -0.5rem auto 0.5rem auto;
+  width: fit-content;
+}
+
+nav {
+  display: flex;
+  gap: 0.25rem;
+}
+
+nav > h2 {
+  display: none;
+}
+
+nav > a {
+  color: var(--color-text);
+  background-color: darkslategrey;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid var(--color-border);
+  text-decoration: none;
+  text-align: center;
+
+  border-radius: 3px;
+}
+
+nav > a:visited {
+  color: var(--color-text);
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content 1fr;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav > h2 {
+    display: block;
+  }
+
+  nav > a {
+    padding: 0.25rem 0.5rem;
+  }
+}
