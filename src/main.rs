@@ -20,10 +20,10 @@ enum Route {
 #[function_component]
 fn App() -> Html {
   html! {
-    <>
-    <BrowserRouter>
-      <Navbar/>
-      <Switch<Route> render={switch}/>
+  <>
+  <BrowserRouter>
+    <Navbar/>
+    <Switch<Route> render={switch}/>
     </BrowserRouter>
     </>
   }
@@ -37,9 +37,9 @@ fn switch(routes: Route) -> Html {
   match routes {
     Route::Home => {
       html! {
-      <main>
-        <Home />
-      </main>
+        <main>
+          <Home />
+        </main>
       }
     }
     Route::Test => {

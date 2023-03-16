@@ -1,24 +1,20 @@
-use yew::prelude::*;
 use crate::components::aur::AurViewer;
+use yew::prelude::*;
 
-pub struct Home {
-  counter: i32,
-}
+pub struct Home {}
 
 impl Component for Home {
   type Message = ();
   type Properties = ();
 
   fn create(_ctx: &Context<Self>) -> Self {
-    Self { counter: 0 }
+    Self {}
   }
 
   fn view(&self, _ctx: &Context<Self>) -> Html {
     html! {
       <>
       <section>
-        {"Hello World"}
-        {self.counter}
         <AurViewer package_name={"osu-lazer-bin"}/>
       </section>
       </>

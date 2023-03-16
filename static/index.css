@@ -46,6 +46,43 @@ nav > a:visited {
   color: var(--color-text);
 }
 
+.aur-viewer {
+  background-color: white;
+  color: black;
+  padding: 0.5rem;
+  margin-left: 0.75rem;
+  font-family: sans-serif;
+}
+
+.aur-viewer h2 {
+  font-size: 1.2rem;
+  padding: 0.25rem 0.25rem;
+}
+
+.aur-package {
+  border: 1px dotted black;
+  padding: 0.15rem 0.25rem;
+}
+
+.aur-package h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.aur-package ul{
+  padding-left: 0.75rem;
+}
+
+.aur-package table { 
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+}
+
+.aur-package th {
+  padding: 0rem 1rem 0rem 0.25rem;
+}
+
 @media (min-width: 1024px) {
   body {
     display: grid;
