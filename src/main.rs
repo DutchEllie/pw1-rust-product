@@ -5,6 +5,7 @@ mod components;
 mod pages;
 
 use components::navbar::Navbar;
+use components::canvas::CanvasThingy;
 use pages::home::Home;
 use yew::prelude::*;
 use yew_router::prelude::*;
@@ -43,7 +44,11 @@ fn switch(routes: Route) -> Html {
       }
     }
     Route::Test => {
-      html! { <div>{"hello world"}</div>}
+      html! {
+        <main>
+          <CanvasThingy/>
+        </main>
+      }
     }
   }
 }

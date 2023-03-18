@@ -137,7 +137,7 @@ impl Component for AurViewer {
         <section class="aur-viewer">
           <h2>{"AUR packages I (help) maintain"}</h2>
           <article class="aur-package">
-
+						{"Loading..."}
           </article>
         </section>
       };
@@ -190,7 +190,8 @@ impl Component for AurViewer {
               </tr>
               <tr>
                 <th>{"Popularity:"}</th>
-                <td>{aur_response.results[0].popularity.clone()}</td>
+								// Precision 2
+                <td>{format!("{:.2}", aur_response.results[0].popularity.clone())}</td>
               </tr>
               <tr>
                 <th>{"Last package:"}</th>
